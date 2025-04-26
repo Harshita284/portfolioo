@@ -25,7 +25,6 @@ const AccordionItem = ({ header, features, benefits }) => {
           </span>
           <RiArrowUpSLine
             className={`w-5 h-5 text-gray-800 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
-            style={{ marginRight: "10px" }}  // ✅ Right se 10px fix
           />
         </div>
       }
@@ -57,7 +56,8 @@ const AccordionItem = ({ header, features, benefits }) => {
           transition-all duration-700 
           opacity-0 pointer-events-none
           group-hover:opacity-100 group-hover:pointer-events-auto
-          ${isPopupOpen ? "opacity-100 pointer-events-auto" : ""}`}
+          ${isPopupOpen ? "opacity-100 pointer-events-auto" : ""}
+          `}
         >
           <ul className="list-disc ml-6 text-black space-y-2 text-sm bg-white mt-2">
             {benefits.list.map((item, idx) => (
