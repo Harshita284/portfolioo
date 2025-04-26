@@ -12,7 +12,7 @@ const AccordionItem = ({ header, features, benefits }) => {
   return (
     <Item
       header={
-        <div className="flex justify-between items-center md:w-[650px] lg:w-[1040px] w-[250px]">
+        <div className="flex justify-between p-1 items-center md:w-[650px] lg:w-[1040px] w-[260px]">
           <span className="text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
             {header}
           </span>
