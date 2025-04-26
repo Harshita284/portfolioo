@@ -6,7 +6,6 @@ import { Accordion, AccordionItem as Item } from "@szhsin/react-accordion";
 import { RiArrowUpSLine } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 
-// ✅ AccordionItem Component
 const AccordionItem = ({ header, features, benefits }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -20,14 +19,13 @@ const AccordionItem = ({ header, features, benefits }) => {
   return (
     <Item
       header={
-        <div className="flex justify-between items-center w-full gap-4">
+        <div className="flex justify-between p-1 items-center md:w-[650px] lg:w-[1040px] w-[230px]">
           <span className="text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
             {header}
           </span>
           <RiArrowUpSLine
-            className={`w-5 h-5 text-gray-800 transition-transform duration-300 ${
-              isOpen ? "rotate-180" : ""
-            }`}
+            className={`w-5 h-5 text-gray-800 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+            style={{ marginRight: "10px" }}  // ✅ Right se 10px fix
           />
         </div>
       }
@@ -59,8 +57,7 @@ const AccordionItem = ({ header, features, benefits }) => {
           transition-all duration-700 
           opacity-0 pointer-events-none
           group-hover:opacity-100 group-hover:pointer-events-auto
-          ${isPopupOpen ? "opacity-100 pointer-events-auto" : ""}
-          `}
+          ${isPopupOpen ? "opacity-100 pointer-events-auto" : ""}`}
         >
           <ul className="list-disc ml-6 text-black space-y-2 text-sm bg-white mt-2">
             {benefits.list.map((item, idx) => (
@@ -73,7 +70,6 @@ const AccordionItem = ({ header, features, benefits }) => {
   );
 };
 
-// ✅ Sms Component
 export default function Sms({ data }) {
   const systemData = data;
   const [popupImage, setPopupImage] = useState(null);
@@ -81,13 +77,10 @@ export default function Sms({ data }) {
   return (
     <div className="w-full min-h-screen px-4 py-10 flex justify-center items-center">
       <div className="w-full max-w-[1400px] border p-4 sm:p-6 rounded-2xl shadow-xl bg-gradient-to-r from-slate-200 to-amber-50">
-        
-        {/* Title */}
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center text-gray-900 mb-10">
           {systemData?.title || "No Title"}
         </h1>
 
-        {/* Overview Section */}
         <div className="flex flex-col-reverse lg:flex-row justify-between gap-6 mb-10">
           <div className="w-full lg:w-[50%] space-y-4">
             <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800">
@@ -111,7 +104,6 @@ export default function Sms({ data }) {
           </div>
         </div>
 
-        {/* Accordion Section */}
         <div className="w-full flex justify-center">
           <div className="w-full max-w-[1100px] border p-4 sm:p-6 rounded-xl shadow-md bg-gradient-to-r from-slate-200 to-stone-100">
             <Accordion transition transitionTimeout={300}>
@@ -127,7 +119,6 @@ export default function Sms({ data }) {
           </div>
         </div>
 
-        {/* Slider Section */}
         <div className="slider-container mt-12 rounded-xl shadow-lg p-4">
           <div className="slider-track flex flex-wrap justify-center gap-4 sm:gap-6">
             {[...Array(2)].map((_, i) => (
@@ -148,7 +139,6 @@ export default function Sms({ data }) {
           </div>
         </div>
 
-        {/* Popup Image Modal */}
         {popupImage && (
           <div className="fixed inset-0 bg-black/70 flex justify-center items-center z-50">
             <div className="relative w-full max-w-5xl h-auto p-4">
@@ -168,7 +158,6 @@ export default function Sms({ data }) {
             </div>
           </div>
         )}
-        
       </div>
     </div>
   );
