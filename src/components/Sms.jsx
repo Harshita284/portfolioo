@@ -8,6 +8,13 @@ import { RxCross2 } from "react-icons/rx";
 
 const AccordionItem = ({ header, features, benefits }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const handleButtonClick = () => {
+    if (typeof window !== "undefined" && window.innerWidth < 1024) {
+      setIsPopupOpen((prev) => !prev);
+    }
+  };
 
   return (
     <Item
@@ -17,9 +24,7 @@ const AccordionItem = ({ header, features, benefits }) => {
             {header}
           </span>
           <RiArrowUpSLine
-            className={`w-5 h-5 text-gray-800 transition-transform duration-300 ${
-              isOpen ? "rotate-180" : ""
-            }`}
+            className={`w-5 h-5 text-gray-800 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
           />
         </div>
       }
@@ -38,11 +43,22 @@ const AccordionItem = ({ header, features, benefits }) => {
       </div>
 
       <div className="relative group mt-6">
-        <button className="bg-gradient-to-r from-blue-600 to-violet-600 text-white py-2 px-4 sm:px-6 rounded-md hover:scale-105 transition-all text-sm sm:text-base">
+        <button
+          className="bg-gradient-to-r from-blue-600 to-violet-600 text-white py-2 px-4 sm:px-6 rounded-md hover:scale-105 transition-all text-sm sm:text-base"
+          onClick={handleButtonClick}
+        >
           {benefits.buttonText}
         </button>
 
-        <div className="absolute top-[-500px] left-1/2 transform -translate-x-1/2 w-[90vw] max-w-[600px] h-[300px] bg-white p-6 mt-4 rounded-xl shadow-xl opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none group-hover:pointer-events-auto z-10 border border-gray-200 overflow-y-auto">
+        <div
+          className={`absolute top-[-500px] left-1/2 transform -translate-x-1/2 w-[90vw] max-w-[600px] h-[300px] bg-white p-6 mt-4 rounded-xl shadow-xl 
+          border border-gray-200 overflow-y-auto z-10
+          transition-all duration-700 
+          opacity-0 pointer-events-none
+          group-hover:opacity-100 group-hover:pointer-events-auto
+          ${isPopupOpen ? "opacity-100 pointer-events-auto" : ""}
+          `}
+        >
           <ul className="list-disc ml-6 text-black space-y-2 text-sm bg-white mt-2">
             {benefits.list.map((item, idx) => (
               <li key={idx}>{item}</li>
@@ -114,7 +130,7 @@ export default function Sms({ data }) {
                     alt={`Slider Image ${idx + 1}`}
                     width={350}
                     height={200}
-                    className="cursor-pointer rounded-xl  sm:w-[10px] md:w-[300px] lg:w-[350px] h-auto max-h-[220px] shadow-md transform transition duration-500 hover:scale-105"
+                    className="cursor-pointer rounded-xl sm:w-[10px] md:w-[300px] lg:w-[350px] h-auto max-h-[220px] shadow-md transform transition duration-500 hover:scale-105"
                     onClick={() => setPopupImage(imgSrc)}
                   />
                 ))}
