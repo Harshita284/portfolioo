@@ -59,8 +59,8 @@ const mdata = [
       }
     ],
     sliderImages: [
-      "/grocery/cart.jpg",
-      "/grocery/brand.jpg",
+      "/grocery/Cart.jpg",
+      "/grocery/Brand.jpg",
       "/grocery/Address-modal.jpg",
       "/grocery/Category.jpg",
       "/grocery/home-scroll1.jpg",

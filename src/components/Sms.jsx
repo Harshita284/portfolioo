@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { Accordion, AccordionItem as Item } from "@szhsin/react-accordion";
-import { RiArrowUpSLine } from "react-icons/ri";
+import { IoIosArrowDown } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 
 const AccordionItem = ({ header, features, benefits }) => {
@@ -23,7 +23,7 @@ const AccordionItem = ({ header, features, benefits }) => {
           <span className="text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
             {header}
           </span>
-          <RiArrowUpSLine
+          <IoIosArrowDown
             className={`w-5 h-5 text-gray-800 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
           />
         </div>
