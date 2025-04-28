@@ -81,7 +81,7 @@ export default function AboutUs() {
           <button
             key={item.id}
             onClick={() => handleKeyClick(item.id)}
-            className="px-5 py-2 rounded-full text-sm text-white border hover:bg-yellow-900 hover:text-white  focus:outline-none focus:ring-2 focus:ring-blue-400 transition ease-in-out duration-200 shadow-md"
+            className="px-5 py-2 rounded-full text-sm text-white border hover:bg-yellow-900 hover:text-white  focus:outline-none focus:ring-2 focus:ring-yellow-800 transition ease-in-out duration-200 shadow-md"
           >
             {item.title}
           </button>
