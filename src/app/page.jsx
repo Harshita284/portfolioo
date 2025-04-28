@@ -201,8 +201,9 @@ export default function AboutUs() {
         </div>
       </div>
 
-      <div className='w-full border-t-2 border-gray-400 p-4 text-center text-sm font-semibold text-white'>
-        © 2025 Code Dev. All rights reserved.
+      <div className='w-full border-t-2 border-gray-400 p-4 text-center text-sm font-bold text-white'>
+        © 2025 Code Dev.
+        All rights reserved.
       </div>
     </div>
   );
