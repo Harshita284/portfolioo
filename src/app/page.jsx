@@ -9,7 +9,7 @@ import mdata from '@/app/data/mdata';
 
 const ITEMS_PER_PAGE = 3;
 
-// Category mapping based on ID
+
 const categorizeItems = (items) => {
   const managementSystems = [];
   const websites = [];
@@ -21,13 +21,13 @@ const categorizeItems = (items) => {
       managementSystems.push(item);
     } else if (["sc", "lks", "add", "genex", "beyond"].includes(item.id)) {
       websites.push(item);
-    } else if (["ejuuz", "wavvy", "lms","wdcb", "tms"].includes(item.id)) {
+    } else if (["ejuuz", "wavvy", "lms", "wdcb", "tms"].includes(item.id)) {
       businessSystems.push(item);
     }
   });
 
   mdata.forEach(item => {
-    if ([ "ceo", "cga"].includes(item.id)) {
+    if (["ceo", "cga"].includes(item.id)) {
       mobileApps.push(item);
     }
   });
@@ -91,7 +91,7 @@ export default function AboutUs() {
 
   return (
     <div className='bg-gradient-to-r from-slate-300 to-slate-900 w-full min-h-screen'>
-      {/* About Us Section */}
+
       <section className='w-full p-6 flex flex-col md:flex-row justify-between items-center gap-10 rounded-xl shadow-inner animate-fadeIn'>
         <div className='md:w-[60%] w-full space-y-5'>
           <h1 className='text-4xl font-extrabold text-black'>About Us</h1>
@@ -106,11 +106,11 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Keys Section */}
+
       <div className='bg-white py-6 shadow-inner mt-6 bg-gradient-to-r from-slate-300 to-slate-900'>
         <h2 className='text-2xl font-bold text-center mb-6'>Our Solutions</h2>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-          {renderKeys('businessSystems', 'Business Systems')}
+          {renderKeys('businessSystems', 'Business ')}
           {renderKeys('managementSystems', 'Management Systems')}
           {renderKeys('websites', 'Websites')}
           {renderKeys('mobileApps', 'Mobile Apps')}
@@ -120,7 +120,7 @@ export default function AboutUs() {
         <h1 className='text-2xl sm:text-3xl font-extrabold text-white text-center'>Our Portfolio</h1>
         <hr className='border-gray-400 my-4 mx-auto w-1/2' />
       </div>
-      {/* Main Category Items Section */}
+
       <div className='px-4 sm:px-8 py-10 space-y-8'>
         {getPagedItems(categorizedData[currentCategory] || []).map(item => (
           <div
@@ -129,7 +129,7 @@ export default function AboutUs() {
             id={item.id}
             className='scroll-mt-24'
           >
-              
+
             {currentCategory === 'mobileApps' ? (
               <MobileApp data={item} />
             ) : (
@@ -138,7 +138,7 @@ export default function AboutUs() {
           </div>
         ))}
 
-        {/* Pagination */}
+
         <div className='flex justify-center gap-2 mt-8'>
           {Array.from({ length: getTotalPages(categorizedData[currentCategory] || []) }).map((_, idx) => (
             <button
@@ -152,7 +152,7 @@ export default function AboutUs() {
         </div>
       </div>
 
-      {/* Footer Section */}
+
       <div className='w-full border-t-2 border-gray-400 p-4 text-center text-sm font-semibold text-white'>
         © 2025 Code Dev. All rights reserved.
       </div>

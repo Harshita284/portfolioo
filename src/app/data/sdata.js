@@ -725,7 +725,7 @@ const sdata = [
   },
   {
     id: "wavvy",
-    title: "Wavvy Mobile App",
+    title: "Wavvy",
     subtitle: "Overview :",
     description: "Wavvy is a salon marketplace app that connects users with nearby salons for effortless appointment booking. The system includes a mobile app for clients, a web application for salon management, and an admin portal—creating a seamless ecosystem for both customers and salon owners.",
     overviewImage: "/mobile/Wavyy.png",
