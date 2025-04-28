@@ -96,11 +96,11 @@ export default function Sms({ data }) {
                 href={systemData.websiteLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-[120px] sm:w-1/2 sm:left-1/2 sm:top-auto sm:translate-x-[-50%] sm:mt-4 sm:text-center 
+                className="block w-[70px] sm:w-1/2 sm:left-1/2 sm:top-auto sm:translate-x-[-50%] sm:mt-4 sm:text-center 
       md:absolute md:top-8 md:left-150 md:translate-x-0 md:w-auto md:mt-0 lg:top-90 lg:left-10
       text-white py-2 px-4 rounded-lg text-sm font-semibold bg-gradient-to-r from-stone-500 to-stone-700"
               >
-                View Demo
+                View
               </a>
             )}
 
