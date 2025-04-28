@@ -324,6 +324,7 @@ const sdata = [
     subtitle: "Overview :",
     description: " Subla Camps is a modern, user-friendly website developed by CodeDev for a Dubai-based desert camping company. The platform offers a seamless online experience for users looking to book an authentic desert stay in Subla’s luxurious and traditional camps. The system integrates directly with Airbnb, enabling smooth synchronization of bookings and availability across platforms.",
     overviewImage: "/sc/subla2.png",
+    websiteLink: "https://sublacamp.ae/",
     benefits: {
       buttonText: "Benefits",
       list: [
@@ -400,6 +401,7 @@ const sdata = [
     description: "For Little Krishna School, we developed an engaging and vibrant website that showcases its educational programs in daycare, dance, spirituality, and phonics. The design highlights a nurturing environment, experienced staff, and fun-filled learning experiences for children.",
 
     overviewImage: "/school/lts1.png",
+    websiteLink: "https://www.littlekrishnaschool.com/",
     benefits: {
       buttonText: "Benefits",
       list: [
@@ -469,6 +471,7 @@ const sdata = [
     description: "We built a modern, user-friendly website for AddWith, a brand known for its modular kitchens, doors, windows, and furnishings. The site emphasizes their commitment to quality and creativity, offering a clean interface and elegant design to reflect their craftsmanship.",
 
     overviewImage: "/add/add1.png",
+    websiteLink: "https://www.addwithinterior.com/",
     benefits: {
       buttonText: "Benefits",
       list: [
@@ -539,6 +542,7 @@ const sdata = [
     description: "CodeDev designed a sleek and professional website for Genex, an HVAC solutions provider with over 18 years of industry experience. The site highlights their expertise in industrial and commercial HVAC installations, featuring trusted brands and ongoing maintenance support.",
 
     overviewImage: "/genex/g1.png",
+    websiteLink: "https://www.genexgroup.in/",
     benefits: {
       buttonText: "Benefits",
       list: [
@@ -611,6 +615,7 @@ const sdata = [
     description: "We created a visually immersive website for Beyond Maps, a premium travel company offering exclusive journeys through the Himalayas. The platform captures the essence of off-the-grid travel, guided by native experts, with breathtaking visuals and storytelling that invites visitors to explore the soul of Kashmir, Himachal Pradesh, and Uttarakhand.",
 
     overviewImage: "/beyond/bm1.png",
+    websiteLink: "https://beyondmaps.co.in",
     benefits: {
       buttonText: "Benefits",
       list: [

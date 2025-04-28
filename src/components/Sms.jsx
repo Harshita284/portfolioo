@@ -56,8 +56,7 @@ const AccordionItem = ({ header, features, benefits }) => {
           transition-all duration-700 
           opacity-0 pointer-events-none
           group-hover:opacity-100 group-hover:pointer-events-auto
-          ${isPopupOpen ? "opacity-100 pointer-events-auto" : ""}
-          `}
+          ${isPopupOpen ? "opacity-100 pointer-events-auto" : ""}`}
         >
           <ul className="list-disc ml-6 text-black space-y-2 text-sm bg-white mt-2">
             {benefits.list.map((item, idx) => (
@@ -76,10 +75,13 @@ export default function Sms({ data }) {
 
   return (
     <div className="w-full min-h-screen px-4 py-10 flex justify-center items-center">
-      <div className="w-full max-w-[1400px] border p-4 sm:p-6 rounded-2xl shadow-xl bg-gradient-to-r from-slate-200 to-amber-50">
+      <div className="w-full max-w-[1400px] border p-4 sm:p-6 rounded-2xl shadow-xl bg-gradient-to-r from-slate-200 to-amber-50 relative">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center text-gray-900 mb-10">
           {systemData?.title || "No Title"}
         </h1>
+
+
+
 
         <div className="flex flex-col-reverse lg:flex-row justify-between gap-6 mb-10">
           <div className="w-full lg:w-[50%] space-y-4">
@@ -89,6 +91,21 @@ export default function Sms({ data }) {
             <p className="text-gray-800 font-medium leading-relaxed text-sm sm:text-base md:text-lg tracking-wide">
               {systemData?.description || "No Description"}
             </p>
+            {systemData?.websiteLink && (
+              <a
+                href={systemData.websiteLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-[120px] sm:w-1/2 sm:left-1/2 sm:top-auto sm:translate-x-[-50%] sm:mt-4 sm:text-center 
+      md:absolute md:top-8 md:left-150 md:translate-x-0 md:w-auto md:mt-0 lg:top-90 lg:left-10
+      text-white py-2 px-4 rounded-lg text-sm font-semibold bg-gradient-to-r from-stone-500 to-stone-700"
+              >
+                View Demo
+              </a>
+            )}
+
+
+
           </div>
 
           <div className="w-full lg:w-[50%]">

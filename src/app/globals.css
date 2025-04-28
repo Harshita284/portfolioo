@@ -84,22 +84,4 @@ body {
     animation: fadeIn 1s ease-out both;
   }
 
-  @keyframes gradientFlow {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
-  .animated-bg {
-    background: linear-gradient(-45deg, #737780, #aec2df, #66727e, #8eaac7);
-    background-size: 400% 400%;
-    animation: gradientFlow 10s ease infinite;
-  }
 }
-
