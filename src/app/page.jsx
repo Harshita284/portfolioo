@@ -101,7 +101,7 @@ export default function AboutUs() {
     <div className='bg-gradient-to-r from-slate-900 to-slate-900 w-full min-h-screen'>
       <section className='w-full p-6 flex flex-col md:flex-row justify-between items-center gap-10 rounded-xl shadow animate-fadeIn border-b border-white'>
         <div className='md:w-[60%] w-full space-y-5'>
-          <h1 className='text-4xl font-extrabold text-white transition-all duration-500 hover:text-purple-600'>
+          <h1 className='text-4xl font-extrabold text-white transition-all duration-500'>
             About Us
           </h1>
           <p className='text-white font-medium leading-relaxed text-base sm:text-lg tracking-wide transition-all duration-500 hover:text-white'>
